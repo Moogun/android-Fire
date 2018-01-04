@@ -17,9 +17,9 @@ import com.toomtoome.fire.Utils.SectionsPagerAdapter;
  * Created by moogunjung on 12/18/17.
  */
 
-public class QuestionPhotoActivity extends AppCompatActivity {
+public class ChoosePhotoActivity extends AppCompatActivity {
 
-    private static final String TAG = "QuestionPhotoActivity";
+    private static final String TAG = "ChoosePhotoActivity";
     private static final int VERIFY_PERMISSIONS_REQUEST = 1;
 
     private ViewPager mViewPager;
@@ -30,29 +30,33 @@ public class QuestionPhotoActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: ");
         setContentView(R.layout.activity_question_photo);
 
+        mViewPager = (ViewPager) findViewById(R.id.question_photo_viewPager);
+
         if (checkPermissionsArray(Permissions.PERMISSIONS)) {
+            Log.d(TAG, "onCreate: checkPermissionsArray");
             setupViewPager();
         } else {
-
             verifyPermissions(Permissions.PERMISSIONS);
+            Log.d(TAG, "onCreate: verifyPermissions");
         }
 
     }
 
     private void setupViewPager() {
+        Log.d(TAG, "setupViewPager: for fragments ");
         Bundle bundle = new Bundle();
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager(), bundle);
         adapter.addFragment(new GalleryFragment());
-        adapter.addFragment(new PhotoFragment());
+        adapter.addFragment(new CameraFragment());
 
-        mViewPager = (ViewPager) findViewById(R.id.container);
+
         mViewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabsBottom);
         tabLayout.setupWithViewPager(mViewPager);
 
         tabLayout.getTabAt(0).setText(getString(R.string.gallery));
-        tabLayout.getTabAt(1).setText(getString(R.string.photo));
+        tabLayout.getTabAt(1).setText(getString(R.string.camera));
     }
 
     public boolean checkPermissionsArray(String[] permissions) {
@@ -69,7 +73,7 @@ public class QuestionPhotoActivity extends AppCompatActivity {
     public boolean checkPermissions(String permission) {
         Log.d(TAG, "checkPermissions: " + permission);
 
-        int permissionRequest = ActivityCompat.checkSelfPermission(QuestionPhotoActivity.this, permission);
+        int permissionRequest = ActivityCompat.checkSelfPermission(ChoosePhotoActivity.this, permission);
 
         if (permissionRequest != PackageManager.PERMISSION_GRANTED) {
             Log.d(TAG, "checkPermissions: \n Permission was not granted for: " + permission);
@@ -84,7 +88,7 @@ public class QuestionPhotoActivity extends AppCompatActivity {
     private void verifyPermissions(String[] permissions) {
         Log.d(TAG, "verifyPermissions: ");
         ActivityCompat.requestPermissions(
-                QuestionPhotoActivity.this,
+                ChoosePhotoActivity.this,
                 permissions,
                 VERIFY_PERMISSIONS_REQUEST
         );

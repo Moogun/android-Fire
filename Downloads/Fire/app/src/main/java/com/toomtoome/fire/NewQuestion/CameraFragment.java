@@ -19,12 +19,13 @@ import com.toomtoome.fire.Utils.Permissions;
  * Created by moogunjung on 12/18/17.
  */
 
-public class PhotoFragment extends Fragment {
+public class CameraFragment extends Fragment {
 
-    private static final String TAG = "PhotoFragment";
+    private static final String TAG = "CameraFragment";
 
-    private static final int PHOTO_FRAGMENT_NUM = 1;
-    private static final int GALLERY_FRAGMENT_NUM = 2;
+    private static final int GALLERY_FRAGMENT_NUM = 1;
+    private static final int CAMERA_FRAGMENT_NUM = 2;
+
     private static final int  CAMERA_REQUEST_CODE = 5;
 
     @Nullable
@@ -33,19 +34,19 @@ public class PhotoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_photo, container, false);
         Log.d(TAG, "onCreateView: ");
 
-        Button btnLaunchCamera = (Button) view.findViewById(R.id.btnLaunchCamera);
+        Button btnLaunchCamera = view.findViewById(R.id.btnLaunchCamera);
         btnLaunchCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: launching camera.");
 
-                if(((QuestionPhotoActivity)getActivity()).getCurrentTabNumber() == PHOTO_FRAGMENT_NUM){
-                    if(((QuestionPhotoActivity)getActivity()).checkPermissions(Permissions.CAMERA_PERMISSION[0])){
+                if(((ChoosePhotoActivity)getActivity()).getCurrentTabNumber() == CAMERA_FRAGMENT_NUM){
+                    if(((ChoosePhotoActivity)getActivity()).checkPermissions(Permissions.CAMERA_PERMISSION[0])){
                         Log.d(TAG, "onClick: starting camera");
                         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                         startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
                     }else{
-                        Intent intent = new Intent(getActivity(), QuestionPhotoActivity.class);
+                        Intent intent = new Intent(getActivity(), ChoosePhotoActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
                     }

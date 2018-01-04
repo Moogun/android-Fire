@@ -67,7 +67,7 @@
 
     <!-- Quetion Photo -->
     <string name="gallery">GALLERY</string>
-    <string name="photo">PHOTO</string>
+    <string name="camera">CAMERA</string>
     <string name="question_saved">Your question successfully saved</string>
 
 

@@ -41,6 +41,7 @@ public class NewQuestionActivity extends AppCompatActivity {
     private static final String TAG = "NewQuestionActivity";
 
     private static final int  CAMERA_REQUEST_CODE = 5;
+    private static final int  PICTURE_REQUEST_CODE = 6;
 
     private Context mContext;
     private FirebaseAuth mAuth;
@@ -72,6 +73,7 @@ public class NewQuestionActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         setupFirebaseAuth(); // shared preference?
+
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference();
 
@@ -119,10 +121,11 @@ public class NewQuestionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //error permision rejecteed?
                 Log.d(TAG, "onClick: starting either camera or photo fragment");
-                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
+//                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
+                Intent intent = new Intent(mContext, ChoosePhotoActivity.class);
+                startActivityForResult(intent, PICTURE_REQUEST_CODE);
             }
         });
 

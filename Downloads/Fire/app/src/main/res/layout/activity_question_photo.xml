@@ -7,7 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -17,7 +16,7 @@
             <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/viewPager">
+                android:id="@+id/question_photo_viewPager">
 
             </android.support.v4.view.ViewPager>
 
@@ -25,15 +24,10 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/relLayout2">
-
-            <RelativeLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentBottom="true">
-
+            android:layout_height="50dp"
+            android:id="@+id/relLayout2"
+            android:layout_alignParentBottom="true"
+            >
                 <android.support.design.widget.AppBarLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -43,19 +37,11 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/tabsBottom"
                         >
-
-
                     </android.support.design.widget.TabLayout>
 
                 </android.support.design.widget.AppBarLayout>
 
-
-            </RelativeLayout>
-
-
         </RelativeLayout>
-
-
 
     </RelativeLayout>
 
