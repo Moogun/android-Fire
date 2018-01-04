@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/index"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:text="10"
+                        />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_toEndOf="@+id/index"
+                        android:layout_toRightOf="@+id/index"
+                        android:text="Gabriella Madelaine"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="@dimen/chapter_vertical_margin"
+                        android:layout_toEndOf="@+id/index"
+                        android:layout_toRightOf="@+id/index"
+                        android:text="An hour ago"
+                        android:textColor="@color/fontGray"
+                        android:textSize="12sp"
+                        android:id="@+id/desc"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:text="단어장"
+                        android:layout_below="@id/desc"
+                        android:layout_alignLeft="@id/title"
+                        android:layout_marginTop="@dimen/chapter_vertical_margin"
+                        android:textSize="12sp"
+                        android:id="@+id/keyword"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/desc"
+                        android:layout_toEndOf="@id/keyword"
+                        android:layout_toRightOf="@id/keyword"
+                        android:layout_alignTop="@id/keyword"
+                        android:drawablePadding="4dp"
+                        android:text="질문"
+                        android:textSize="12sp"
+                        android:id="@+id/question"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

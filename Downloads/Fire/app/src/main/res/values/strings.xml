@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Fire</string>
+
+    <string name="course_list">Course List</string>
+    <string name="course_activity">Course Activity</string>
+    <string name="preview_activity">Preview Activity</string>
+    <string name="profile_activity">Profile Activity</string>
+    <string name="preview_note">NOTE</string>
+    <string name="preview_info">INFO</string>
+    <string name="preview_chapter">CHAPTER</string>
+    <string name="preview_question">QUESTION</string>
+
+    <string name="preview_add">ADD</string>
+    <string name="preview_contents">CONTENTS</string>
+    <string name="preview_more">MORE</string>
+
+
+    <string name="question_list">Questions</string>
+    <string name="new_question">Ask</string>
+    <string name="save_question">save</string>
+
+    <string name="wordbook">단어장</string>
+
+    <!-- Login -->
+    <string name="no_account_yet">No account yet? Create one</string>
+    <string name="empty_Input_field">You must fill out all the fields</string>
+    <string name="auth_failed">Auth Failed</string>
+    <string name="auth_success">Auth Success</string>
+
+
+
+    <!-- Profile  -->
+    <string name="profile_fragment">Profile</string>
+
+    <string name="username_saved">Username saved</string>
+    <string name="username_exists">"The username already exists."</string>
+    <string name="wrong_password">"Authentification failed. Wrong password. "</string>
+
+    <string name="empty_password_field">"you must enter a password."</string>
+    <string name="email_in_use">The email is already in use.</string>
+    <string name="email_updated">Email updated</string>
+
+
+    <!-- Account Settings  -->
+   <string name="options">Options</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="signing_out">Signing Out...</string>
+    <string name="signout_confirm">Are you sure you want to sign out?</string>
+
+    <string name="edit_profile_fragment">Edit Profile</string>
+    <string name="sign_out_fragment">Sign out</string>
+
+    <string name="calling_activity">calling_activity</string>
+
+    <!-- dialog names -->
+    <string name="confirm_remove_dialog">ConfirmRemoveDialog</string>
+    <string name="confirm_password_dialog">ConfirmPaswordDialog</string>
+
+    <string name="remove_course">Remove course?</string>
+    <string name="remove_message">any message</string>
+
+    <string name="lorem_ipsum2">An verear theophrastus delicatissimi cum. In cum ancillae convenire. Est ne omnes causae corrumpit, eum duis sententiae necessitatibus te, mollis.</string>
+
+    <string name="string_open_camera">Open Camera</string>
+
+    <!-- Quetion Photo -->
+    <string name="gallery">GALLERY</string>
+    <string name="photo">PHOTO</string>
+    <string name="question_saved">Your question successfully saved</string>
+
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/com.toomtoome.com.fire"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    android:padding="4dip"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout0">
+
+        <include layout="@layout/snippet_wordbook_toolbar"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayoutl"
+        android:layout_below="@id/relLayout0">
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/tabLayout"
+            app1:tabGravity="center"
+            app1:tabIndicatorHeight="0dp"
+            app1:tabBackground="@drawable/tab_selector"
+            >
+        </android.support.design.widget.TabLayout>
+
+    </RelativeLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/relLayout2"
+       android:layout_below="@id/relLayoutl">
+
+       <android.support.v4.view.ViewPager
+           android:id="@+id/pager"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           >
+       </android.support.v4.view.ViewPager>
+
+   </RelativeLayout>
+
+
+</RelativeLayout>

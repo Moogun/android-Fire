@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "502301489244",
+    "firebase_url": "https://fire-5a33d.firebaseio.com",
+    "project_id": "fire-5a33d",
+    "storage_bucket": "fire-5a33d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502301489244:android:464f0fedf96b89a1",
+        "android_client_info": {
+          "package_name": "com.toomtoome.fire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502301489244-s40hq7l5pnm7mdq9292ccj36ubnc7kn7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.toomtoome.fire",
+            "certificate_hash": "a53a9bdc71f57e5771cced505393cbafd3da7282"
+          }
+        },
+        {
+          "client_id": "502301489244-bv2vvpa82e8l1ov6ordqccnv2v3qgqp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXA9sTZs8ZEw3aH4FATYHXX0FugZHwlHw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502301489244-bv2vvpa82e8l1ov6ordqccnv2v3qgqp7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "502301489244-vvcknhq99s17nqog5j024fh986dfal2i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Moogun.Fire"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
